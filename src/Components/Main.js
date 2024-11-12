@@ -1,12 +1,22 @@
 import React, { useState } from "react";
 
-import SliderImg from "../Assets/Slider1.png";
-import Logo from "../Assets/logo.png";
+import Slider from "react-slick"; // For Awards slider
+
+// slider animation
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+import Logo from "../Assets/images/logo.png";
+import Logo2 from "../Assets/images/logo (2).png";
+import InfoImg5 from "../Assets/images/Info/info-img-5.png";
+import InfoImg6 from "../Assets/images/Info/info-img-6.png";
+import InfoImg7 from "../Assets/images/Info/info-img-7.png";
+import InfoImg8 from "../Assets/images/Info/info-img-8.png";
 
 export default function Main() {
   const [showAccordion, setShowAccordion] = useState(false);
   const [slideBarWidth, setSlideBarWidth] = useState(52);
-  const [slideBarPosition, setSlideBarPosition] = useState({ left: "48%" });
+  const [slideBarPosition, setSlideBarPosition] = useState({ left: "47.4%" });
 
   const handleMouseEnter = (width, position) => {
     setSlideBarWidth(width);
@@ -15,7 +25,57 @@ export default function Main() {
 
   const handleMouseLeave = () => {
     setSlideBarWidth(52);
-    setSlideBarPosition({ left: "48%" });
+    setSlideBarPosition({ left: "47.4%" });
+  };
+
+  // Slider next btn
+  function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={`${className} slide-btn`}
+        style={{
+          ...style,
+          display: window.innerWidth > 1100 ? "block" : "none",
+          right: "50px",
+          top: "55%",
+        }}
+        onClick={onClick}
+      />
+    );
+  }
+
+  // Slider previous btn
+  function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={`${className} slide-btn`}
+        style={{
+          ...style,
+          display: window.innerWidth > 1100 ? "block" : "none",
+          left: "30px",
+          zIndex: "10",
+          top: "55%",
+        }}
+        onClick={onClick}
+      />
+    );
+  }
+
+  // Slider animation here
+  var settings = {
+    // dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3500,
+    fade: true,
+    pauseOnHover: false,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
   };
 
   return (
@@ -25,6 +85,7 @@ export default function Main() {
         id="mm-0"
       >
         <div className="kingster-body-wrapper clearfix  kingster-with-frame">
+          {/* Top Section Starts Here */}
           <div className="kingster-top-bar">
             <div className="kingster-top-bar-background"></div>
 
@@ -38,7 +99,7 @@ export default function Main() {
                   >
                     <path d="M255.4 48.2c.2-.1 .4-.2 .6-.2s.4 .1 .6 .2L460.6 194c2.1 1.5 3.4 3.9 3.4 6.5l0 13.6L291.5 355.7c-20.7 17-50.4 17-71.1 0L48 214.1l0-13.6c0-2.6 1.2-5 3.4-6.5L255.4 48.2zM48 276.2L190 392.8c38.4 31.5 93.7 31.5 132 0L464 276.2 464 456c0 4.4-3.6 8-8 8L56 464c-4.4 0-8-3.6-8-8l0-179.8zM256 0c-10.2 0-20.2 3.2-28.5 9.1L23.5 154.9C8.7 165.4 0 182.4 0 200.5L0 456c0 30.9 25.1 56 56 56l400 0c30.9 0 56-25.1 56-56l0-255.5c0-18.1-8.7-35.1-23.4-45.6L284.5 9.1C276.2 3.2 266.2 0 256 0z" />
                   </svg>
-                  contact@VallabhAshram.edu
+                  school.db@vallabhashram.in
                   <svg
                     className="contact-svg"
                     xmlns="http://www.w3.org/2000/svg"
@@ -46,7 +107,7 @@ export default function Main() {
                   >
                     <path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" />
                   </svg>
-                  +1-3435-2356-222
+                  +91 260 2404300
                 </div>
 
                 <div className="kingster-top-bar-right kingster-item-pdlr">
@@ -81,7 +142,9 @@ export default function Main() {
               </div>
             </div>
           </div>
+          {/* Top Section Ends Here */}
 
+          {/* Header Section Starts Here */}
           <header
             className="kingster-header-wrap kingster-header-style-plain kingster-style-menu-right kingster-sticky-navigation kingster-style-fixed clearfix"
             data-navigation-offset="75px"
@@ -107,7 +170,7 @@ export default function Main() {
                       <li
                         className="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-5271 kingster-normal-menu"
                         onMouseEnter={() =>
-                          handleMouseEnter(52, { left: "48%" })
+                          handleMouseEnter(52, { left: "47.4%" })
                         }
                         onMouseLeave={handleMouseLeave}
                       >
@@ -119,7 +182,7 @@ export default function Main() {
                       <li
                         className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5227 kingster-normal-menu"
                         onMouseEnter={() =>
-                          handleMouseEnter(54, { left: "54.2%" })
+                          handleMouseEnter(54, { left: "53.6%" })
                         }
                         onMouseLeave={handleMouseLeave}
                       >
@@ -730,7 +793,7 @@ export default function Main() {
                       <li
                         className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-5735 kingster-mega-menu"
                         onMouseEnter={() =>
-                          handleMouseEnter(95, { left: "59.8%" })
+                          handleMouseEnter(95, { left: "59.2%" })
                         }
                         onMouseLeave={handleMouseLeave}
                       >
@@ -837,7 +900,7 @@ export default function Main() {
                       <li
                         className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-5728 kingster-normal-menu"
                         onMouseEnter={() =>
-                          handleMouseEnter(97, { left: "68.5%" })
+                          handleMouseEnter(97, { left: "68%" })
                         }
                         onMouseLeave={handleMouseLeave}
                       >
@@ -858,7 +921,7 @@ export default function Main() {
                       <li
                         className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6036 kingster-normal-menu"
                         onMouseEnter={() =>
-                          handleMouseEnter(70, { left: "77.8%" })
+                          handleMouseEnter(70, { left: "77.5%" })
                         }
                         onMouseLeave={handleMouseLeave}
                       >
@@ -940,29 +1003,646 @@ export default function Main() {
             </div>
             {/* kingster-header-container */}
           </header>
-          {/* header */}
+          {/* Header Section Ends Here */}
 
           <div className="kingster-page-wrapper" id="kingster-page-wrapper">
             <div className="gdlr-core-page-builder-body clearfix">
+              {/* Slider Section Start Here */}
               <div
-                className="gdlr-core-pbf-wrapper "
-                // style="padding: 0px 0px 0px 0px;"
+                className="gdlr-core-pbf-wrapper"
+                style={{ padding: "0px 0px 0px 0px" }}
               >
                 <div
                   className="gdlr-core-pbf-background-wrap"
-                  // style="background-color: #191919 ;"
+                  style={{ backgroundColor: "#191919" }}
+                ></div>
+
+                <Slider className="homepage-slides" {...settings}>
+                  {/* Slide 1 */}
+                  <div className="single-slide-item hero-area-bg-1">
+                    <div className="overlay"></div>
+                    <div className="hero-area-content">
+                      <div className="container">
+                        <div className="row justify-content-center">
+                          <div
+                            className="col-lg-12"
+                            data-aos="fade-up"
+                            data-aos-duration="1500"
+                          >
+                            {/* <div className="section-title">
+                              <h6
+                                className=""
+                                data-aos="fade-up"
+                                data-aos-duration="1500"
+                                style={{ color: "#fff", marginLeft: "0px" }}
+                              >
+                                Leading in Agricultural Products and Spices
+                              </h6>
+
+                              <h1
+                                className="text-left"
+                                data-aos="fade-up"
+                                data-aos-duration="1500"
+                                style={{
+                                  maxWidth:
+                                    window.innerWidth > 991 ? "75%" : "",
+                                }}
+                              >
+                                We are committed to providing you with the
+                                highest quality products and exceptional
+                                service, no matter where you are in the world.
+                              </h1>
+                            </div> */}
+
+                            {/* <NavLink
+                              to="/about"
+                              className="main-btn"
+                              data-aos="fade-up"
+                              data-aos-duration="1500"
+                            >
+                              Learn More
+                            </NavLink> */}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Slide 2 */}
+                  <div className="single-slide-item hero-area-bg-2">
+                    <div className="overlay"></div>
+                    <div className="hero-area-content">
+                      <div className="container">
+                        <div className="row justify-content-center">
+                          <div
+                            className="col-lg-12 animate__animated animate__fadeInUp"
+                            data-wow-delay=".2s"
+                          >
+                            {/* <div className="section-title">
+                              <h6
+                                className="animate__animated animate__fadeInDown"
+                                style={{ color: "#fff", marginLeft: "0px" }}
+                              >
+                                A comprehensive range of Seed Products
+                              </h6>
+
+                              <h1
+                                className="text-left"
+                                style={{
+                                  maxWidth:
+                                    window.innerWidth > 991 ? "75%" : "",
+                                }}
+                              >
+                                We maintain high standards for product
+                                flawlessness at all phases, starting with
+                                collect gathering and ending with packaging. We
+                                also ensure that products are handled with care
+                                and supplied in accordance with international
+                                quality standards.
+                              </h1>
+                            </div> */}
+
+                            {/* <NavLink
+                              to="/about"
+                              className="main-btn animate__animated animate__fadeInDown"
+                            >
+                              Learn More
+                            </NavLink> */}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Slide 3 */}
+                  <div className="single-slide-item hero-area-bg-3">
+                    <div className="overlay"></div>
+                    <div className="hero-area-content">
+                      <div className="container">
+                        <div className="row justify-content-center">
+                          <div
+                            className="col-lg-12 animate__animated animate__fadeInUp"
+                            data-wow-delay=".2s"
+                          >
+                            {/* <div className="section-title">
+                              <h6
+                                className="animate__animated animate__fadeInDown"
+                                style={{ color: "#fff", marginLeft: "0px" }}
+                              >
+                                Robust infrastructure facilities
+                              </h6>
+
+                              <h1
+                                className="text-left"
+                                style={{
+                                  maxWidth:
+                                    window.innerWidth > 991 ? "75%" : "",
+                                }}
+                              >
+                                The best of infrastructure, processes, planning
+                                and people bringing you the best and the most
+                                premium products in the business.
+                              </h1>
+                            </div> */}
+
+                            {/* <NavLink
+                              to="/about"
+                              className="main-btn animate__animated animate__fadeInDown"
+                            >
+                              Learn More
+                            </NavLink> */}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Slide 4 */}
+                  <div className="single-slide-item hero-area-bg-4">
+                    <div className="overlay"></div>
+                    <div className="hero-area-content">
+                      <div className="container">
+                        <div className="row justify-content-center">
+                          <div
+                            className="col-lg-12 animate__animated animate__fadeInUp"
+                            data-wow-delay=".2s"
+                          >
+                            {/* <div className="section-title">
+                              <h6
+                                className="animate__animated animate__fadeInDown"
+                                style={{ color: "#fff", marginLeft: "0px" }}
+                              >
+                                Robust infrastructure facilities
+                              </h6>
+
+                              <h1
+                                className="text-left"
+                                style={{
+                                  maxWidth:
+                                    window.innerWidth > 991 ? "75%" : "",
+                                }}
+                              >
+                                The best of infrastructure, processes, planning
+                                and people bringing you the best and the most
+                                premium products in the business.
+                              </h1>
+                            </div> */}
+
+                            {/* <NavLink
+                              to="/about"
+                              className="main-btn animate__animated animate__fadeInDown"
+                            >
+                              Learn More
+                            </NavLink> */}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Slider>
+              </div>
+              {/* Slider Section End Here */}
+
+              {/* Info Section Starts here */}
+              <div
+                className="gdlr-core-pbf-wrapper "
+                style={{ padding: "0px 0px 0px 0px" }}
+              >
+                <div
+                  className="gdlr-core-pbf-background-wrap"
+                  // style="background-color: #262626 ;"
                 ></div>
 
                 <div className="gdlr-core-pbf-wrapper-content gdlr-core-js ">
                   <div className="gdlr-core-pbf-wrapper-container clearfix gdlr-core-pbf-wrapper-full-no-space">
-                    <div className="gdlr-core-pbf-element">
-                      <div className="gdlr-core-revolution-slider-item gdlr-core-item-pdlr gdlr-core-item-pdb ">
-                        <img src={SliderImg} />
+                    <div
+                      className="gdlr-core-pbf-column gdlr-core-column-15 gdlr-core-column-first"
+                      data-skin="Column White"
+                    >
+                      <div
+                        className="gdlr-core-pbf-column-content-margin gdlr-core-js info-wrap  slider-link-1"
+                        // style="padding: 70px 0px; height: 283.328px;"
+                        data-sync-height="column-height"
+                        data-sync-height-center=""
+                      >
+                        <div
+                          className="gdlr-core-sync-height-pre-spaces"
+                          // style="padding-top: 10px;"
+                        ></div>
+
+                        <div className="gdlr-core-pbf-background-wrap">
+                          <div
+                            className="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js info-img-1 info-background"
+                            data-parallax-speed="0.1"
+                          ></div>
+                        </div>
+
+                        <div className="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content">
+                          <div className="gdlr-core-pbf-element">
+                            <div
+                              className="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-center-align gdlr-core-with-caption gdlr-core-item-pdlr"
+                              // style="padding-bottom: 0px;"
+                            >
+                              <div className="gdlr-core-column-service-media gdlr-core-media-image">
+                                <img
+                                  src={InfoImg5}
+                                  alt=""
+                                  width="40"
+                                  height="40"
+                                  title="hp2-col-1-icon"
+                                />
+                              </div>
+
+                              <div className="gdlr-core-column-service-content-wrapper ">
+                                <div className="gdlr-core-column-service-title-wrap heading-wrapper">
+                                  <h3 className="gdlr-core-column-service-title gdlr-core-skin-title">
+                                    University Life
+                                  </h3>
+
+                                  <div
+                                    className="gdlr-core-column-service-caption gdlr-core-info-font gdlr-core-skin-caption"
+                                    // style="font-size: 17px ;font-weight: 500 ;font-style: normal ;"
+                                  >
+                                    Overall in here
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <a
+                          className="gdlr-core-pbf-column-link"
+                          href="#"
+                          target="_self"
+                        ></a>
+                      </div>
+                    </div>
+
+                    <div
+                      className="gdlr-core-pbf-column gdlr-core-column-15"
+                      data-skin="Column White"
+                    >
+                      <div
+                        className="gdlr-core-pbf-column-content-margin gdlr-core-js info-wrap  slider-link-2"
+                        // style="padding: 70px 0px; height: 283.328px;"
+                        data-sync-height="column-height"
+                        data-sync-height-center=""
+                      >
+                        <div
+                          className="gdlr-core-sync-height-pre-spaces"
+                          // style="padding-top: 7.5px;"
+                        ></div>
+
+                        <div className="gdlr-core-pbf-background-wrap">
+                          <div
+                            className="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js info-img-2 info-background "
+                            // style='background-image: url("https://goodlayers.b-cdn.net/kingster/wp-content/uploads/2018/08/hp2-col-2.jpg"); background-size: cover; background-position: center center; height: 291.981px; transform: translate(0px, -59.5px);'
+                            data-parallax-speed="0.1"
+                          ></div>
+                        </div>
+
+                        <div className="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content">
+                          <div className="gdlr-core-pbf-element">
+                            <div
+                              className="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-center-align gdlr-core-with-caption gdlr-core-item-pdlr"
+                              // style="padding-bottom: 0px;"
+                            >
+                              <div
+                                className="gdlr-core-column-service-media gdlr-core-media-image"
+                                // style="margin-bottom: 20px;margin-left: auto ;margin-right: auto ;"
+                              >
+                                <img
+                                  src={InfoImg6}
+                                  alt=""
+                                  width="49"
+                                  height="45"
+                                  title="hp2-col-2-icon"
+                                />
+                              </div>
+
+                              <div className="gdlr-core-column-service-content-wrapper">
+                                <div className="gdlr-core-column-service-title-wrap heading-wrapper">
+                                  <h3
+                                    className="gdlr-core-column-service-title gdlr-core-skin-title"
+                                    // style="font-size: 19px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;"
+                                  >
+                                    Graduation
+                                  </h3>
+                                  <div
+                                    className="gdlr-core-column-service-caption gdlr-core-info-font gdlr-core-skin-caption"
+                                    // style="font-size: 17px ;font-weight: 500 ;font-style: normal ;"
+                                  >
+                                    Getting Diploma
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <a
+                          className="gdlr-core-pbf-column-link"
+                          href="#"
+                          target="_self"
+                        ></a>
+                      </div>
+                    </div>
+
+                    <div
+                      className="gdlr-core-pbf-column gdlr-core-column-15"
+                      data-skin="Column White"
+                    >
+                      <div
+                        className="gdlr-core-pbf-column-content-margin gdlr-core-js info-wrap  slider-link-3"
+                        // style="padding: 70px 0px; height: 283.328px;"
+                        data-sync-height="column-height"
+                        data-sync-height-center=""
+                      >
+                        <div
+                          className="gdlr-core-sync-height-pre-spaces"
+                          // style="padding-top: 8px;"
+                        ></div>
+
+                        <div className="gdlr-core-pbf-background-wrap">
+                          <div
+                            className="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js info-img-3 info-background "
+                            // style='background-image: url("https://goodlayers.b-cdn.net/kingster/wp-content/uploads/2018/08/hp2-col-3.jpg"); background-size: cover; background-position: center center; height: 291.981px; transform: translate(0px, -59.5px);'
+                            data-parallax-speed="0.1"
+                          ></div>
+                        </div>
+
+                        <div className="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content">
+                          <div className="gdlr-core-pbf-element">
+                            <div
+                              className="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-center-align gdlr-core-with-caption gdlr-core-item-pdlr"
+                              // style="padding-bottom: 0px;"
+                            >
+                              <div
+                                className="gdlr-core-column-service-media gdlr-core-media-image"
+                                // style="margin-bottom: 20px;margin-left: auto ;margin-right: auto ;"
+                              >
+                                <img
+                                  src={InfoImg7}
+                                  alt=""
+                                  width="50"
+                                  height="44"
+                                  title="hp2-col-3-icon"
+                                />
+                              </div>
+
+                              <div className="gdlr-core-column-service-content-wrapper">
+                                <div className="gdlr-core-column-service-title-wrap heading-wrapper">
+                                  <h3
+                                    className="gdlr-core-column-service-title gdlr-core-skin-title"
+                                    // style="font-size: 19px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;"
+                                  >
+                                    Athletics
+                                  </h3>
+
+                                  <div
+                                    className="gdlr-core-column-service-caption gdlr-core-info-font gdlr-core-skin-caption"
+                                    // style="font-size: 17px ;font-weight: 500 ;font-style: normal ;"
+                                  >
+                                    Sport Clubs
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <a
+                          className="gdlr-core-pbf-column-link"
+                          href="#"
+                          target="_self"
+                        ></a>
+                      </div>
+                    </div>
+
+                    <div
+                      className="gdlr-core-pbf-column gdlr-core-column-15"
+                      data-skin="Column White"
+                    >
+                      <div
+                        className="gdlr-core-pbf-column-content-margin gdlr-core-js info-wrap  slider-link-4"
+                        // style="padding: 70px 0px; height: 283.328px;"
+                        data-sync-height="column-height"
+                        data-sync-height-center=""
+                      >
+                        <div
+                          className="gdlr-core-sync-height-pre-spaces"
+                          // style="padding-top: 9.5px;"
+                        ></div>
+
+                        <div className="gdlr-core-pbf-background-wrap">
+                          <div
+                            className="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js info-img-4 info-background "
+                            // style='background-image: url("https://goodlayers.b-cdn.net/kingster/wp-content/uploads/2018/08/hp2-col-4.jpg"); background-size: cover; background-position: center center; height: 291.981px; transform: translate(0px, -59.5px);'
+                            data-parallax-speed="0.1"
+                          ></div>
+                        </div>
+
+                        <div className="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content">
+                          <div className="gdlr-core-pbf-element">
+                            <div
+                              className="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-center-align gdlr-core-with-caption gdlr-core-item-pdlr"
+                              // style="padding-bottom: 0px;"
+                            >
+                              <div className="gdlr-core-column-service-media gdlr-core-media-image">
+                                <img
+                                  src={InfoImg8}
+                                  alt=""
+                                  width="41"
+                                  height="41"
+                                  title="hp2-col-4-icon"
+                                />
+                              </div>
+
+                              <div className="gdlr-core-column-service-content-wrapper">
+                                <div className="gdlr-core-column-service-title-wrap heading-wrapper">
+                                  <h3
+                                    className="gdlr-core-column-service-title gdlr-core-skin-title"
+                                    // style="font-size: 19px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;"
+                                  >
+                                    Social
+                                  </h3>
+                                  <div
+                                    className="gdlr-core-column-service-caption gdlr-core-info-font gdlr-core-skin-caption"
+                                    // style="font-size: 17px ;font-weight: 500 ;font-style: normal ;"
+                                  >
+                                    Overall in here
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <a
+                          className="gdlr-core-pbf-column-link"
+                          href="#"
+                          target="_self"
+                        ></a>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+              {/* Info Section Ends Here */}
+
+              {/* About Us Section Starts Here */}
+
+              <div
+                className="gdlr-core-pbf-wrapper "
+                style={{ padding: "125px 0px 0px 0px" }}
+              >
+                <div
+                  className="gdlr-core-pbf-background-wrap"
+                  style={{ backgroundColor: "#1e2d49" }}
+                ></div>
+
+                <div className="gdlr-core-pbf-wrapper-content gdlr-core-js ">
+                  <div className="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
+                    <div className="gdlr-core-pbf-column gdlr-core-column-20 gdlr-core-column-first">
+                      <div className="gdlr-core-pbf-column-content-margin gdlr-core-js ">
+                        <div className="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
+                          <div className="gdlr-core-pbf-element">
+                            <div
+                              className="gdlr-core-image-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-item-pdlr"
+                              // style="padding-bottom: 20px ;"
+                            >
+                              <div
+                                className="gdlr-core-image-item-wrap gdlr-core-media-image  gdlr-core-image-item-style-rectangle"
+                                // style="border-width: 0px;"
+                              >
+                                <img
+                                  src={Logo2}
+                                  alt=""
+                                  width="292"
+                                  height="40"
+                                  title="logo-white"
+                                />
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className="gdlr-core-pbf-element">
+                            <div
+                              className="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr"
+                              // style="padding-bottom: 20px ;"
+                            >
+                              <div className="gdlr-core-title-item-title-wrap clearfix">
+                                <h3 className="gdlr-core-title-item-title gdlr-core-skin-title about-heading">
+                                  About Our University
+                                </h3>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="gdlr-core-pbf-column gdlr-core-column-40">
+                      <div className="gdlr-core-pbf-column-content-margin gdlr-core-js ">
+                        <div className="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
+                          <div className="gdlr-core-pbf-element">
+                            <div
+                              className="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align"
+                              // style="padding-bottom: 15px ;"
+                            >
+                              <div
+                                className="gdlr-core-text-box-item-content"
+                                // style="font-size: 23px ;text-transform: none ;color: #d8e3fb ;"
+                              >
+                                <p>
+                                  We are one of the largest, most diverse
+                                  universities in the USA with over 90,000
+                                  students in USA, and a further 30,000 studying
+                                  across 180 countries for Kingster University.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className="gdlr-core-pbf-element">
+                            <div
+                              className="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align"
+                              // style="padding-bottom: 15px ;"
+                            >
+                              <div
+                                className="gdlr-core-text-box-item-content"
+                                // style="font-size: 19px ;font-weight: 500 ;text-transform: none ;color: #ffffff ;"
+                              >
+                                <p>
+                                  Kingster University was established by John
+                                  Smith in 1920 for the public benefit and it is
+                                  recognized globally. Throughout our great
+                                  history, Kingster has offered access to a wide
+                                  range of academic opportunities. As a world
+                                  leader in higher education, the University has
+                                  pioneered change in the sector.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className="gdlr-core-pbf-element">
+                            <div className="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align">
+                              <a
+                                className="gdlr-core-button  gdlr-core-button-transparent gdlr-core-left-align gdlr-core-button-no-border"
+                                href="/"
+                                id="gdlr-core-button-id-1"
+                              >
+                                <span className="gdlr-core-content">
+                                  Read More
+                                  <i
+                                    className="gdlr-core-pos-right fa fa-long-arrow-right"
+                                    // style="font-size: 18px ;color: #ffffff ;"
+                                  ></i>
+                                </span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="gdlr-core-pbf-column gdlr-core-column-60 gdlr-core-column-first">
+                      <div
+                        className="gdlr-core-pbf-column-content-margin gdlr-core-js "
+                        // style="margin: 0px 0px -40px 0px;padding: 70px 0px 0px 0px;"
+                      >
+                        <div className="gdlr-core-pbf-background-wrap"></div>
+
+                        <div className="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
+                          <div className="gdlr-core-pbf-element">
+                            <div
+                              className="gdlr-core-image-item gdlr-core-item-pdb  gdlr-core-center-align gdlr-core-item-pdlr"
+                              // style="padding-bottom: 0px ;"
+                            >
+                              <div
+                                className="gdlr-core-image-item-wrap gdlr-core-media-image  gdlr-core-image-item-style-round"
+                                // style="border-width: 0px;z-index: 999 ;position: relative ;"
+                              >
+                                <img
+                                  src="https://goodlayers.b-cdn.net/kingster/wp-content/uploads/2018/08/about-building-1.jpg"
+                                  width="1320"
+                                  height="218"
+                                  srcset="https://goodlayers.b-cdn.net/kingster/wp-content/uploads/2018/08/about-building-1-400x66.jpg 400w, https://goodlayers.b-cdn.net/kingster/wp-content/uploads/2018/08/about-building-1-600x99.jpg 600w, https://goodlayers.b-cdn.net/kingster/wp-content/uploads/2018/08/about-building-1-800x132.jpg 800w, https://goodlayers.b-cdn.net/kingster/wp-content/uploads/2018/08/about-building-1.jpg 1320w"
+                                  sizes="(max-width: 767px) 100vw, (max-width: 1150px) 100vw, 1150px"
+                                  alt=""
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* About Us Section Ends Here */}
             </div>
           </div>
         </div>
