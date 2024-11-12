@@ -1,3 +1,7 @@
+/* Google Font Import 
+======================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
 html,
 body,
 div,
@@ -6636,11 +6640,11 @@ body.kingster-full .kingster-fixed-footer {
     background-image: url(https://goodlayers.b-cdn.net/kingster/wp-content/plugins/goodlayers-core/include/images/pattern/pattern-1.png)
 }
 
-/* .kingster-item-pdlr,
+.kingster-item-pdlr,
 .gdlr-core-item-pdlr {
     padding-left: 20px;
     padding-right: 20px
-} */
+}
 
 .kingster-item-rvpdlr,
 .gdlr-core-item-rvpdlr {
@@ -7071,6 +7075,28 @@ body.blog .kingster-sidebar-style-none,
 .kingster-body h6,
 .kingster-body .kingster-title-font,
 .kingster-body .gdlr-core-title-font {
+    font-family: "Poppins", sans-serif
+}
+
+body {
+    font-family: "Poppins", sans-serif
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Poppins", sans-serif
+}
+
+
+a {
+    font-family: "Poppins", sans-serif
+}
+
+p {
     font-family: "Poppins", sans-serif
 }
 
@@ -9684,7 +9710,7 @@ body .gdlr-core-flipbox-item .gdlr-core-flipbox-item-image {
     margin-top: 0;
     margin-bottom: 20px;
     font-size: inherit;
-    line-height: inherit
+    line-height: inherit;
 }
 
 .gdlr-core-page-builder-body .gdlr-core-no-p-space p {
@@ -10241,7 +10267,7 @@ ul.slides .clearfix {
 }
 
 .gdlr-core-button .gdlr-core-content {
-    display: inline-block;
+    display: inline-flex;
     vertical-align: middle
 }
 
@@ -26201,12 +26227,30 @@ html .woocommerce ul.product_list_widget li .star-rating {
 
 /* About Section Starts here */
 
-.about-heading{
+.about-heading {
     font-size: 31px !important;
     font-weight: 600 !important;
     letter-spacing: 0px !important;
     text-transform: none !important;
     color: #51be78 !important;
+}
+
+#gdlr-core-button-id-1{
+    font-size: 16px;
+    color: #ffffff;
+    padding: 0px;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+#gdlr-core-button-id-1:hover {
+    color: #3db166;
+}
+
+#gdlr-core-button-id-1:hover svg{
+    transform: translateX(10px);
+    transition: all 0.3s ease-in-out;
+    fill: #3db166;
 }
 
 /* About Section Ends here */

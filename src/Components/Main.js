@@ -12,11 +12,12 @@ import InfoImg5 from "../Assets/images/Info/info-img-5.png";
 import InfoImg6 from "../Assets/images/Info/info-img-6.png";
 import InfoImg7 from "../Assets/images/Info/info-img-7.png";
 import InfoImg8 from "../Assets/images/Info/info-img-8.png";
+import VideoCover from "../Assets/images/download.jfif";
 
 export default function Main() {
   const [showAccordion, setShowAccordion] = useState(false);
   const [slideBarWidth, setSlideBarWidth] = useState(52);
-  const [slideBarPosition, setSlideBarPosition] = useState({ left: "47.4%" });
+  const [slideBarPosition, setSlideBarPosition] = useState({ left: "41.5%" });
 
   const handleMouseEnter = (width, position) => {
     setSlideBarWidth(width);
@@ -25,7 +26,7 @@ export default function Main() {
 
   const handleMouseLeave = () => {
     setSlideBarWidth(52);
-    setSlideBarPosition({ left: "47.4%" });
+    setSlideBarPosition({ left: "41.5%" });
   };
 
   // Slider next btn
@@ -170,7 +171,7 @@ export default function Main() {
                       <li
                         className="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-5271 kingster-normal-menu"
                         onMouseEnter={() =>
-                          handleMouseEnter(52, { left: "47.4%" })
+                          handleMouseEnter(52, { left: "41.5%" })
                         }
                         onMouseLeave={handleMouseLeave}
                       >
@@ -182,7 +183,7 @@ export default function Main() {
                       <li
                         className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5227 kingster-normal-menu"
                         onMouseEnter={() =>
-                          handleMouseEnter(54, { left: "53.6%" })
+                          handleMouseEnter(54, { left: "48%" })
                         }
                         onMouseLeave={handleMouseLeave}
                       >
@@ -793,7 +794,7 @@ export default function Main() {
                       <li
                         className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-5735 kingster-mega-menu"
                         onMouseEnter={() =>
-                          handleMouseEnter(95, { left: "59.2%" })
+                          handleMouseEnter(95, { left: "54.5%" })
                         }
                         onMouseLeave={handleMouseLeave}
                       >
@@ -900,7 +901,7 @@ export default function Main() {
                       <li
                         className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-5728 kingster-normal-menu"
                         onMouseEnter={() =>
-                          handleMouseEnter(97, { left: "68%" })
+                          handleMouseEnter(97, { left: "64.3%" })
                         }
                         onMouseLeave={handleMouseLeave}
                       >
@@ -921,7 +922,7 @@ export default function Main() {
                       <li
                         className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6036 kingster-normal-menu"
                         onMouseEnter={() =>
-                          handleMouseEnter(70, { left: "77.5%" })
+                          handleMouseEnter(70, { left: "74.2%" })
                         }
                         onMouseLeave={handleMouseLeave}
                       >
@@ -958,7 +959,7 @@ export default function Main() {
                         className="menu-item menu-item-type-post_type menu-item-object-page menu-item-5734 kingster-normal-menu"
                         // onMouseEnter={handleMouseEnter}
                         onMouseEnter={() =>
-                          handleMouseEnter(74, { left: "84.5%" })
+                          handleMouseEnter(74, { left: "81.9%" })
                         }
                         onMouseLeave={handleMouseLeave}
                       >
@@ -968,7 +969,7 @@ export default function Main() {
                       <li
                         className="menu-item menu-item-type-post_type menu-item-object-page menu-item-5733 kingster-normal-menu"
                         onMouseEnter={() =>
-                          handleMouseEnter(113, { left: "92%" })
+                          handleMouseEnter(113, { left: "90%" })
                         }
                         onMouseLeave={handleMouseLeave}
                       >
@@ -1548,11 +1549,14 @@ export default function Main() {
                           <div className="gdlr-core-pbf-element">
                             <div
                               className="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align"
-                              // style="padding-bottom: 15px ;"
+                              style={{ paddingBottom: "15px" }}
                             >
                               <div
                                 className="gdlr-core-text-box-item-content"
-                                // style="font-size: 23px ;text-transform: none ;color: #d8e3fb ;"
+                                style={{
+                                  fontSize: "23px",
+                                  color: "#d8e3fb",
+                                }}
                               >
                                 <p>
                                   We are one of the largest, most diverse
@@ -1567,11 +1571,15 @@ export default function Main() {
                           <div className="gdlr-core-pbf-element">
                             <div
                               className="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align"
-                              // style="padding-bottom: 15px ;"
+                              style={{ paddingBottom: "15px" }}
                             >
                               <div
                                 className="gdlr-core-text-box-item-content"
-                                // style="font-size: 19px ;font-weight: 500 ;text-transform: none ;color: #ffffff ;"
+                                style={{
+                                  fontSize: "19px",
+                                  color: "#ffffff",
+                                  fontWeight: "500",
+                                }}
                               >
                                 <p>
                                   Kingster University was established by John
@@ -1595,10 +1603,18 @@ export default function Main() {
                               >
                                 <span className="gdlr-core-content">
                                   Read More
-                                  <i
-                                    className="gdlr-core-pos-right fa fa-long-arrow-right"
-                                    // style="font-size: 18px ;color: #ffffff ;"
-                                  ></i>
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512"
+                                    height="18px"
+                                    width="18px"
+                                    style={{
+                                      fill: "#ffffff",
+                                      margin: "5px 0 0 7px",
+                                    }}
+                                  >
+                                    <path d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z" />
+                                  </svg>
                                 </span>
                               </a>
                             </div>
@@ -1610,26 +1626,24 @@ export default function Main() {
                     <div className="gdlr-core-pbf-column gdlr-core-column-60 gdlr-core-column-first">
                       <div
                         className="gdlr-core-pbf-column-content-margin gdlr-core-js "
-                        // style="margin: 0px 0px -40px 0px;padding: 70px 0px 0px 0px;"
+                        style={{
+                          margin: "0px 0px -40px 0px",
+                          padding: "70px 0px 0px 0px",
+                        }}
                       >
                         <div className="gdlr-core-pbf-background-wrap"></div>
 
                         <div className="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
                           <div className="gdlr-core-pbf-element">
-                            <div
-                              className="gdlr-core-image-item gdlr-core-item-pdb  gdlr-core-center-align gdlr-core-item-pdlr"
-                              // style="padding-bottom: 0px ;"
-                            >
+                            <div className="gdlr-core-image-item gdlr-core-center-align gdlr-core-item-pdlr">
                               <div
                                 className="gdlr-core-image-item-wrap gdlr-core-media-image  gdlr-core-image-item-style-round"
-                                // style="border-width: 0px;z-index: 999 ;position: relative ;"
+                                style={{ zIndex: "999", position: "relative" }}
                               >
                                 <img
-                                  src="https://goodlayers.b-cdn.net/kingster/wp-content/uploads/2018/08/about-building-1.jpg"
+                                  src={VideoCover}
                                   width="1320"
                                   height="218"
-                                  srcset="https://goodlayers.b-cdn.net/kingster/wp-content/uploads/2018/08/about-building-1-400x66.jpg 400w, https://goodlayers.b-cdn.net/kingster/wp-content/uploads/2018/08/about-building-1-600x99.jpg 600w, https://goodlayers.b-cdn.net/kingster/wp-content/uploads/2018/08/about-building-1-800x132.jpg 800w, https://goodlayers.b-cdn.net/kingster/wp-content/uploads/2018/08/about-building-1.jpg 1320w"
-                                  sizes="(max-width: 767px) 100vw, (max-width: 1150px) 100vw, 1150px"
                                   alt=""
                                 />
                               </div>
