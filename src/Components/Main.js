@@ -1662,12 +1662,12 @@ export default function Main() {
               {/* Video Section Starts here */}
 
               <div
-                className="gdlr-core-pbf-wrapper video-section"
-                style={{ padding: "220px 0px 170px 0px" }}
+                className="gdlr-core-pbf-wrapper video-section "
+                style={{ padding: "220px 0px 148px 0px" }}
               >
-                <div className="gdlr-core-pbf-background-wrap">
+                <div className="gdlr-core-pbf-background-wrap ">
                   <div
-                    className="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js video-img "
+                    className="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js video-img"
                     data-parallax-speed="0.1"
                   ></div>
 
@@ -1743,8 +1743,8 @@ export default function Main() {
               {/* Admission Section Starts here */}
 
               <div
-                className="gdlr-core-pbf-wrapper "
-                // style="padding: 0px 0px 0px 0px;"
+                className="gdlr-core-pbf-wrapper Admission-section"
+                style={{ padding: "0px 0px 0px 0px" }}
               >
                 <div className="gdlr-core-pbf-background-wrap">
                   <div
@@ -1759,16 +1759,16 @@ export default function Main() {
                     <div className="gdlr-core-pbf-column gdlr-core-column-30 gdlr-core-column-first">
                       <div
                         className="gdlr-core-pbf-column-content-margin gdlr-core-js "
-                        // style="min-height: 575px; height: 575px;"
+                        style={{ minHeight: "575px", height: "650px" }}
                         data-sync-height="height-half"
                       >
                         <div className="gdlr-core-pbf-background-wrap">
                           <div
-                            className="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js"
-                            // style="background-image: url(https://goodlayers.b-cdn.net/kingster/wp-content/uploads/2016/06/shutterstock_734589535.jpg) ;background-size: cover ;background-position: center ;"
+                            className="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js admission-img-left"
                             data-parallax-speed="0"
                           ></div>
                         </div>
+
                         <div className="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content"></div>
                       </div>
                     </div>
@@ -1776,7 +1776,10 @@ export default function Main() {
                     <div className="gdlr-core-pbf-column gdlr-core-column-30">
                       <div
                         className="gdlr-core-pbf-column-content-margin gdlr-core-js "
-                        // style="padding: 80px 120px 55px 90px; height: 575px;"
+                        style={{
+                          padding: "80px 120px 55px 90px",
+                          height: "650px",
+                        }}
                         data-sync-height="height-half"
                         data-sync-height-center=""
                       >
@@ -1784,10 +1787,10 @@ export default function Main() {
                           className="gdlr-core-sync-height-pre-spaces"
                           // style="padding-top: 34.492px;"
                         ></div>
+
                         <div className="gdlr-core-pbf-background-wrap">
                           <div
-                            className="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js"
-                            // style='background-image: url("https://goodlayers.b-cdn.net/kingster/wp-content/uploads/2018/08/hp-2-half.jpg"); background-size: cover; background-position: center center; height: 554.5px; transform: translate(0px, -60.9344px);'
+                            className="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js admission-img-right"
                             data-parallax-speed="0.1"
                           ></div>
                         </div>
@@ -1796,20 +1799,15 @@ export default function Main() {
                           <div className="gdlr-core-pbf-element">
                             <div
                               className="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr"
-                              // style="padding-bottom: 20px ;"
+                              style={{ paddingBottom: "20px" }}
                             >
                               <div className="gdlr-core-title-item-title-wrap clearfix">
-                                <h3
-                                  className="gdlr-core-title-item-title gdlr-core-skin-title "
-                                  // style="font-size: 29px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;color: #ffffff ;"
-                                >
+                                <h3 className="gdlr-core-title-item-title gdlr-core-skin-title ">
                                   Apply for Admission
                                 </h3>
                               </div>
-                              <span
-                                className="gdlr-core-title-item-caption gdlr-core-info-font gdlr-core-skin-caption"
-                                // style="font-size: 19px ;font-weight: 500 ;font-style: normal ;color: #51be78 ;"
-                              >
+
+                              <span className="gdlr-core-title-item-caption gdlr-core-info-font gdlr-core-skin-caption admission-open">
                                 Fall 2019 applications are now open
                               </span>
                             </div>
@@ -1838,12 +1836,11 @@ export default function Main() {
                           <div className="gdlr-core-pbf-element">
                             <div
                               className="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align"
-                              // style="padding-bottom: 0px ;"
+                              style={{ paddingBottom: "0px" }}
                             >
                               <a
                                 className="gdlr-core-button  gdlr-core-button-solid gdlr-core-left-align gdlr-core-button-no-border"
                                 href="/kingster/apply-to-kingster/"
-                                // style="font-size: 15px ;color: #ffffff ;padding: 12px 29px 17px 31px;text-transform: none ;border-radius: 2px;-moz-border-radius: 2px;-webkit-border-radius: 2px;"
                               >
                                 <span className="gdlr-core-content">
                                   Apply Now
@@ -1859,6 +1856,229 @@ export default function Main() {
               </div>
 
               {/* Admission Section Ends here */}
+
+              {/* Footer Section Starts Here */}
+
+              <footer className="">
+                <div className="kingster-footer-wrapper ">
+                  <div className="kingster-footer-container kingster-container clearfix">
+                    <div className="kingster-footer-column kingster-item-pdlr kingster-column-15">
+                      <div
+                        id="text-2"
+                        className="widget widget_text kingster-widget"
+                      >
+                        <div className="textwidget">
+                          <p>
+                            <img decoding="async" src={Logo} alt="" />
+                            <br />
+                            <span
+                              className="gdlr-core-space-shortcode"
+                              // style="margin-top: 5px ;"
+                            ></span>
+                            <br />
+                            N. H. NO. 8, Killa Pardi,
+                            <br />
+                            District Valsad,
+                            <br />
+                            Gujarat, India - (396 125)
+                          </p>
+
+                          <p>
+                            <span
+                              style={{ fontSize: "15px", color: "#ffffff" }}
+                            >
+                              +91 260 2404300
+                            </span>
+                            <br />
+                            <span
+                              className="gdlr-core-space-shortcode"
+                              style={{ marginTop: "-20px" }}
+                            ></span>
+                            <br />
+                            <a
+                              style={{ fontSize: "15px", color: "#ffffff" }}
+                              href="mailto:school.db@vallabhashram.in"
+                            >
+                              school.db@vallabhashram.in
+                            </a>
+                          </p>
+                          <div className="gdlr-core-divider-item gdlr-core-divider-item-normal gdlr-core-left-align">
+                            <div
+                              className="gdlr-core-divider-line gdlr-core-skin-divider"
+                              style={{
+                                borderColor: "#3db166",
+                                borderWidth: "2px",
+                              }}
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="kingster-footer-column kingster-item-pdlr kingster-column-15">
+                      <div
+                        id="gdlr-core-custom-menu-widget-2"
+                        className="widget widget_gdlr-core-custom-menu-widget kingster-widget"
+                      >
+                        <h3 className="kingster-widget-title">Our Campus</h3>
+                        <span className="clear"></span>
+                        <div className="menu-our-campus-container">
+                          <ul
+                            id="menu-our-campus"
+                            className="gdlr-core-custom-menu-widget gdlr-core-menu-style-plain"
+                          >
+                            <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-5709 kingster-normal-menu">
+                              <a href="#">Acedemic</a>
+                            </li>
+                            <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-5710 kingster-normal-menu">
+                              <a href="#">Planning &amp; Administration</a>
+                            </li>
+                            <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-5711 kingster-normal-menu">
+                              <a href="#">Campus Safety</a>
+                            </li>
+                            <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-5712 kingster-normal-menu">
+                              <a href="#">Office of the Chancellor</a>
+                            </li>
+                            <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-5713 kingster-normal-menu">
+                              <a href="#">Facility Services</a>
+                            </li>
+                            <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-5714 kingster-normal-menu">
+                              <a href="#">Human Resources</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="kingster-footer-column kingster-item-pdlr kingster-column-15">
+                      <div
+                        id="gdlr-core-custom-menu-widget-3"
+                        className="widget widget_gdlr-core-custom-menu-widget kingster-widget"
+                      >
+                        <h3 className="kingster-widget-title">Campus Life</h3>
+                        <span className="clear"></span>
+                        <div className="menu-campus-life-container">
+                          <ul
+                            id="menu-campus-life"
+                            className="gdlr-core-custom-menu-widget gdlr-core-menu-style-plain"
+                          >
+                            <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-5715 kingster-normal-menu">
+                              <a href="#">Accessibility</a>
+                            </li>
+                            <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-5716 kingster-normal-menu">
+                              <a href="#">Financial Aid</a>
+                            </li>
+                            <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-5717 kingster-normal-menu">
+                              <a href="#">Food Services</a>
+                            </li>
+                            <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-5718 kingster-normal-menu">
+                              <a href="#">Housing</a>
+                            </li>
+                            <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-5719 kingster-normal-menu">
+                              <a href="#">Information Technologies</a>
+                            </li>
+                            <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-5720 kingster-normal-menu">
+                              <a href="#">Student Life</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="kingster-footer-column kingster-item-pdlr kingster-column-15">
+                      <div
+                        id="gdlr-core-custom-menu-widget-4"
+                        className="widget widget_gdlr-core-custom-menu-widget kingster-widget"
+                      >
+                        <h3 className="kingster-widget-title">Academics</h3>
+                        <span className="clear"></span>
+                        <div className="menu-academics-container">
+                          <ul
+                            id="menu-academics"
+                            className="gdlr-core-custom-menu-widget gdlr-core-menu-style-plain"
+                          >
+                            <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-5721 kingster-normal-menu">
+                              <a href="#">Canvas</a>
+                            </li>
+                            <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-5722 kingster-normal-menu">
+                              <a href="#">Catalyst</a>
+                            </li>
+                            <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-5723 kingster-normal-menu">
+                              <a href="#">Library</a>
+                            </li>
+                            <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-5724 kingster-normal-menu">
+                              <a href="#">Time Schedule</a>
+                            </li>
+                            <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-5725 kingster-normal-menu">
+                              <a href="#">Apply For Admissions</a>
+                            </li>
+                            <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-5726 kingster-normal-menu">
+                              <a href="#">Pay My Tuition</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="kingster-copyright-wrapper">
+                  <div className="kingster-copyright-container kingster-container clearfix">
+                    <div className="kingster-copyright-left kingster-item-pdlr">
+                      Copyright All Right Reserved 2024, GoodLayers
+                    </div>
+                    <div className="kingster-copyright-right kingster-item-pdlr">
+                      <span
+                        className="gdlr-core-social-network-item gdlr-core-item-pdb  gdlr-core-none-align gdlr-direction-horizontal"
+                        // style="padding-bottom: 0px ;display: block ;"
+                      >
+                        <a
+                          href="#"
+                          target="_blank"
+                          className="gdlr-core-social-network-icon"
+                          title="facebook"
+                        >
+                          <i className="fa6b fa6-facebook"></i>
+                        </a>
+                        <a
+                          href="#"
+                          target="_blank"
+                          className="gdlr-core-social-network-icon"
+                          title="linkedin"
+                        >
+                          <i className="fa6b fa6-linkedin"></i>
+                        </a>
+                        <a
+                          href="#"
+                          target="_blank"
+                          className="gdlr-core-social-network-icon"
+                          title="skype"
+                        >
+                          <i className="fa6b fa6-skype"></i>
+                        </a>
+                        <a
+                          href="#"
+                          target="_blank"
+                          className="gdlr-core-social-network-icon"
+                          title="twitter"
+                        >
+                          <i className="fa6b fa6-x-twitter"></i>
+                        </a>
+                        <a
+                          href="#"
+                          target="_blank"
+                          className="gdlr-core-social-network-icon"
+                          title="instagram"
+                        >
+                          <i className="fa6b fa6-instagram"></i>
+                        </a>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </footer>
+
+              {/* Footer Section Ends Here */}
             </div>
           </div>
         </div>
