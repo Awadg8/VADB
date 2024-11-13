@@ -13,6 +13,7 @@ import InfoImg6 from "../Assets/images/Info/info-img-6.png";
 import InfoImg7 from "../Assets/images/Info/info-img-7.png";
 import InfoImg8 from "../Assets/images/Info/info-img-8.png";
 import VideoCover from "../Assets/images/download.jfif";
+import PlayBtn from "../Assets/images/play-btn.png";
 
 export default function Main() {
   const [showAccordion, setShowAccordion] = useState(false);
@@ -1657,6 +1658,207 @@ export default function Main() {
               </div>
 
               {/* About Us Section Ends Here */}
+
+              {/* Video Section Starts here */}
+
+              <div
+                className="gdlr-core-pbf-wrapper video-section"
+                style={{ padding: "220px 0px 170px 0px" }}
+              >
+                <div className="gdlr-core-pbf-background-wrap">
+                  <div
+                    className="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js video-img "
+                    data-parallax-speed="0.1"
+                  ></div>
+
+                  <div className="overlay"></div>
+                </div>
+
+                <div className="gdlr-core-pbf-wrapper-content gdlr-core-js ">
+                  <div
+                    className="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container-custom"
+                    style={{ maxWidth: "710px" }}
+                  >
+                    <div className="gdlr-core-pbf-element">
+                      <div
+                        className="gdlr-core-image-item gdlr-core-item-pdb  gdlr-core-center-align gdlr-core-item-pdlr"
+                        // style="padding-bottom: 40px ;"
+                      >
+                        <div
+                          className="gdlr-core-image-item-wrap gdlr-core-media-image  gdlr-core-image-item-style-rectangle"
+                          // style="border-width: 0px;"
+                        >
+                          <a
+                            className="gdlr-core-lightgallery gdlr-core-js "
+                            href="/"
+                            data-lg-id="f74f2412-71c8-4710-9a84-33ce44faf49b"
+                          >
+                            <img
+                              src={PlayBtn}
+                              alt=""
+                              width="82"
+                              height="82"
+                              title="icon-play"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="gdlr-core-pbf-element">
+                      <div className="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-center-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr">
+                        <div className="gdlr-core-title-item-title-wrap clearfix">
+                          <h3
+                            className="gdlr-core-title-item-title gdlr-core-skin-title "
+                            // style="font-size: 38px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;color: #ffffff ;"
+                          >
+                            Video Tour in Kingster
+                          </h3>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="gdlr-core-pbf-element">
+                      <div
+                        className="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-center-align"
+                        // style="padding-bottom: 0px ;"
+                      >
+                        <div
+                          className="gdlr-core-text-box-item-content"
+                          // style="font-size: 19px ;font-weight: 500 ;text-transform: none ;color: #ffffff ;"
+                        >
+                          <p>
+                            Take a tour in Kingster and you will find the best
+                            university in the state. The video will take you to
+                            every places in this university.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* Video Section Ends here */}
+
+              {/* Admission Section Starts here */}
+
+              <div
+                className="gdlr-core-pbf-wrapper "
+                // style="padding: 0px 0px 0px 0px;"
+              >
+                <div className="gdlr-core-pbf-background-wrap">
+                  <div
+                    className="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js"
+                    // style="background-size: cover; background-repeat: no-repeat; background-position: center center; height: 411px; transform: translate(0px, -487.475px);"
+                    data-parallax-speed="0.8"
+                  ></div>
+                </div>
+
+                <div className="gdlr-core-pbf-wrapper-content gdlr-core-js ">
+                  <div className="gdlr-core-pbf-wrapper-container clearfix gdlr-core-pbf-wrapper-full-no-space">
+                    <div className="gdlr-core-pbf-column gdlr-core-column-30 gdlr-core-column-first">
+                      <div
+                        className="gdlr-core-pbf-column-content-margin gdlr-core-js "
+                        // style="min-height: 575px; height: 575px;"
+                        data-sync-height="height-half"
+                      >
+                        <div className="gdlr-core-pbf-background-wrap">
+                          <div
+                            className="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js"
+                            // style="background-image: url(https://goodlayers.b-cdn.net/kingster/wp-content/uploads/2016/06/shutterstock_734589535.jpg) ;background-size: cover ;background-position: center ;"
+                            data-parallax-speed="0"
+                          ></div>
+                        </div>
+                        <div className="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content"></div>
+                      </div>
+                    </div>
+
+                    <div className="gdlr-core-pbf-column gdlr-core-column-30">
+                      <div
+                        className="gdlr-core-pbf-column-content-margin gdlr-core-js "
+                        // style="padding: 80px 120px 55px 90px; height: 575px;"
+                        data-sync-height="height-half"
+                        data-sync-height-center=""
+                      >
+                        <div
+                          className="gdlr-core-sync-height-pre-spaces"
+                          // style="padding-top: 34.492px;"
+                        ></div>
+                        <div className="gdlr-core-pbf-background-wrap">
+                          <div
+                            className="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js"
+                            // style='background-image: url("https://goodlayers.b-cdn.net/kingster/wp-content/uploads/2018/08/hp-2-half.jpg"); background-size: cover; background-position: center center; height: 554.5px; transform: translate(0px, -60.9344px);'
+                            data-parallax-speed="0.1"
+                          ></div>
+                        </div>
+
+                        <div className="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content">
+                          <div className="gdlr-core-pbf-element">
+                            <div
+                              className="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr"
+                              // style="padding-bottom: 20px ;"
+                            >
+                              <div className="gdlr-core-title-item-title-wrap clearfix">
+                                <h3
+                                  className="gdlr-core-title-item-title gdlr-core-skin-title "
+                                  // style="font-size: 29px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;color: #ffffff ;"
+                                >
+                                  Apply for Admission
+                                </h3>
+                              </div>
+                              <span
+                                className="gdlr-core-title-item-caption gdlr-core-info-font gdlr-core-skin-caption"
+                                // style="font-size: 19px ;font-weight: 500 ;font-style: normal ;color: #51be78 ;"
+                              >
+                                Fall 2019 applications are now open
+                              </span>
+                            </div>
+                          </div>
+
+                          <div className="gdlr-core-pbf-element">
+                            <div
+                              className="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align"
+                              // style="padding-bottom: 20px ;"
+                            >
+                              <div
+                                className="gdlr-core-text-box-item-content"
+                                // style="font-size: 18px ;text-transform: none ;color: #ffffff ;"
+                              >
+                                <p>
+                                  We don’t just give students an education and
+                                  experiences that set them up for success in a
+                                  career. We help them succeed in their
+                                  career—to discover a field they’re passionate
+                                  about and dare to lead it.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className="gdlr-core-pbf-element">
+                            <div
+                              className="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align"
+                              // style="padding-bottom: 0px ;"
+                            >
+                              <a
+                                className="gdlr-core-button  gdlr-core-button-solid gdlr-core-left-align gdlr-core-button-no-border"
+                                href="/kingster/apply-to-kingster/"
+                                // style="font-size: 15px ;color: #ffffff ;padding: 12px 29px 17px 31px;text-transform: none ;border-radius: 2px;-moz-border-radius: 2px;-webkit-border-radius: 2px;"
+                              >
+                                <span className="gdlr-core-content">
+                                  Apply Now
+                                </span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Admission Section Ends here */}
             </div>
           </div>
         </div>

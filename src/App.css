@@ -672,7 +672,7 @@ input[type="reset"] {
     letter-spacing: .8px;
     padding: 15px 33px;
     display: inline-block;
-    -webkit-appearance: none
+    /* -webkit-appearance: none */
 }
 
 input[type="button"],
@@ -4151,10 +4151,10 @@ ul.sf-menu>.menu-item-language li:last-child {
 }
 
 .wpcf7 select {
-    -webkit-appearance: none;
+    /* -webkit-appearance: none; */
     border-radius: 0;
-    -moz-border-radius: 0;
-    -webkit-border-radius: 0
+    /* -moz-border-radius: 0; */
+    /* -webkit-border-radius: 0 */
 }
 
 .wpcf7 input[type="button"],
@@ -10245,7 +10245,7 @@ ul.slides .clearfix {
     letter-spacing: .8px;
     padding: 15px 33px;
     display: inline-block;
-    -webkit-appearance: none;
+    appearance: none;
     border-radius: 27px;
     -moz-border-radius: 27px;
     -webkit-border-radius: 27px
@@ -10412,7 +10412,7 @@ ul.slides .clearfix {
     transform: translateY(-50%);
     left: 20px;
     right: 20px;
-    -webkit-backface-visibility: hidden
+    /* -webkit-backface-visibility: hidden; */
 }
 
 .gdlr-core-image-content .gdlr-core-image-content-thumbnail {
@@ -10645,8 +10645,8 @@ ul.slides .clearfix {
 .gdlr-core-input-wrap select,
 .gdlr-core-input-wrap select:focus,
 .gdlr-core-input-wrap input[type="date"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
+    /* -webkit-appearance: none; */
+    /* -moz-appearance: none; */
     appearance: none
 }
 
@@ -10659,7 +10659,7 @@ ul.slides .clearfix {
     letter-spacing: .8px;
     padding: 15px 33px;
     display: inline-block;
-    -webkit-appearance: none
+    /* -webkit-appearance: none */
 }
 
 .gdlr-core-input-wrap input[type="button"],
@@ -15667,7 +15667,7 @@ body .gdlr-core-tab-feature3-item .gdlr-core-tab-feature3-content-button .gdlr-c
     border-bottom-width: 1px;
     border-bottom-style: solid;
     margin-bottom: 0;
-    backface-visibility: hidden
+    backface-visibility: hidden;
 }
 
 .gdlr-core-icon-list-with-background-round .gdlr-core-icon-list-icon-wrap {
@@ -20323,9 +20323,9 @@ ul.gdlr-core-sly-nav li.active {
     height: 65px
 }
 
-.gdlr-core-gallery-with-thumbnail-wrap .gdlr-core-image-overlay {
-    /* background: url(../../../../../../../../../plugins/goodlayers-core/include/images/gallery/gallery-shadow.png) bottom center repeat-x */
-}
+/* .gdlr-core-gallery-with-thumbnail-wrap .gdlr-core-image-overlay {
+    background: url(../../../../../../../../../plugins/goodlayers-core/include/images/gallery/gallery-shadow.png) bottom center repeat-x
+} */
 
 .gdlr-core-gallery-with-thumbnail-wrap.gdlr-core-inside-slider {
     position: relative
@@ -20389,7 +20389,7 @@ ul.gdlr-core-sly-nav li.active {
 .gdlr-core-flexslider.flexslider ul.slides>li {
     margin-bottom: 0;
     display: none;
-    -webkit-backface-visibility: hidden
+    /* -webkit-backface-visibility: hidden */
 }
 
 .gdlr-core-flexslider.flexslider ul.slides>li .gdlr-core-item-list {
@@ -24547,10 +24547,10 @@ body .gdlr-core-product-item.woocommerce .gdlr-core-product-grid-2 div.star-rati
 .gdlr-core-course-form .gdlr-core-course-form-combobox select:focus {
     outline: none;
     box-shadow: none;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
+    /* -moz-box-shadow: none; */
+    /* -webkit-box-shadow: none; */
+    /* -webkit-appearance: none; */
+    /* -moz-appearance: none; */
     appearance: none
 }
 
@@ -26235,7 +26235,7 @@ html .woocommerce ul.product_list_widget li .star-rating {
     color: #51be78 !important;
 }
 
-#gdlr-core-button-id-1{
+#gdlr-core-button-id-1 {
     font-size: 16px;
     color: #ffffff;
     padding: 0px;
@@ -26247,10 +26247,38 @@ html .woocommerce ul.product_list_widget li .star-rating {
     color: #3db166;
 }
 
-#gdlr-core-button-id-1:hover svg{
+#gdlr-core-button-id-1:hover svg {
     transform: translateX(10px);
     transition: all 0.3s ease-in-out;
     fill: #3db166;
 }
 
 /* About Section Ends here */
+
+/* Video Section Starts here */
+
+.video-img {
+    background-image: url("./Assets/images/Slider/Slider1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 640px;
+    transform: translate(0px, 0px);
+}
+
+.video-section h3 {
+    font-size: 38px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0px !important;
+    text-transform: none !important;
+    color: #ffffff !important;
+}
+
+.video-section p{
+    font-size: 19px;
+    font-weight: 500;
+    text-transform: none;
+    color: #ffffff;
+}
+
+/* Video Section Ends here */
